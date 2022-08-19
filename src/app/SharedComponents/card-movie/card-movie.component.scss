@@ -1,0 +1,46 @@
+@import '../../../assets/variables';
+
+.card-movie {
+    max-width: 220px;
+
+    .cover-area {
+        position: relative;
+        margin-bottom: 10px;
+
+        .backdrop {
+            height: 300px;
+            width: 100%;
+            border-radius: 15px;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .rate {
+            border-radius: 20px;
+            background-color: $light_gold;
+            color: $dark_gold;
+            padding: 5px 15px;
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            right: -20px;
+        }
+    }
+
+    .info-area {
+        .title {
+            color: $light_blue_1;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .release {
+            margin-bottom: 10px;
+        }
+
+        .about {
+            font-size: 12px;
+        }
+    }
+}
