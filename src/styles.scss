@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/variables';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: $primary_font;
+    color: white;
+    background: rgb(13,26,60);
+    background: linear-gradient(180deg, rgba(13,26,60,1) 0%, rgba(11,18,37,1) 51%);
+    min-height: 100%;
+}

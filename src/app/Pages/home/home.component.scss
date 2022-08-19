@@ -1,0 +1,12 @@
+section {
+    padding: 20px 50px;
+
+    &:first-child {
+        background: linear-gradient(180deg, rgba(11,18,37,1) 0%, rgba(13,26,60,1) 51%);
+    }
+
+    h2 {
+        margin: 0;
+        font-weight: 300;
+    }
+}
