@@ -5,7 +5,7 @@
     </div>
     <div class="info-area">
         <div class="title">{{data.title}}</div>
-        <div class="release">Lançamento: {{data.release_date}}</div>
+        <div class="release">Lançamento: {{data.release_date | date: "dd/MM/YYYY"}}</div>
         <div class="about">{{data.overview}}</div>
     </div>
 </div>

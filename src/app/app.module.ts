@@ -10,6 +10,7 @@ import { MainHeaderComponent } from './SharedComponents/main-header/main-header.
 import { CardMovieComponent } from './SharedComponents/card-movie/card-movie.component';
 import { InputSearchComponent } from './SharedComponents/input-search/input-search.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
