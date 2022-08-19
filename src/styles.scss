@@ -11,8 +11,8 @@ body {
     font-family: $primary_font;
     color: white;
     background: rgb(13,26,60);
-    background: linear-gradient(180deg, rgba(13,26,60,1) 0%, rgba(11,18,37,1) 51%);
     min-height: 100%;
+    margin: 0;
 }
 
 img {

@@ -15,21 +15,14 @@ export class GetMoviesService {
   constructor(private http: HttpClient) {
   }
 
-  getMovies() {
-    let moviesUrl = `${this.url}popular?api_key=${this.apiKey}`;
+  getMovies(category: string) {
+    let moviesUrl = `${this.url + category}?api_key=${this.apiKey}&language=pt-BR`;
 
-    return this.http.get(moviesUrl).subscribe(
-      res => {
-        console.log("res: ", res);
-      },
-      error => {
-        
-      }
-    );
+    return this.http.get(moviesUrl);
   }
 
   searchMovies(query: string) {
-    let searchUrl = `${this.searchUrl}?api_key=${this.apiKey}&query=${query}`;
+    let searchUrl = `${this.searchUrl}?api_key=${this.apiKey}&query=${query}&language=pt-BR`;
 
     return this.http.get(searchUrl)
       .subscribe(
@@ -43,7 +36,7 @@ export class GetMoviesService {
   }
 
   getDetails(id: number) {
-    let detailsUrl = `${this.url}${id}?api_key=${this.apiKey}`;
+    let detailsUrl = `${this.url}${id}?api_key=${this.apiKey}&language=pt-BR`;
 
     return this.http.get(detailsUrl)
       .subscribe(

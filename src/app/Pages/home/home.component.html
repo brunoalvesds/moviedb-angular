@@ -2,11 +2,16 @@
 <section id="now-playing">
     <h2>Em cartaz</h2>
     <ul class="movie-list">
-        <li class="movie-item">
-            <app-card-movie></app-card-movie>
+        <li class="movie-item" *ngFor="let item of nowPlayingList;">
+            <app-card-movie [data]="item"></app-card-movie>
         </li>
     </ul>
 </section>
 <section id="up-coming">
     <h2>Próximos Lançamentos</h2>
+    <ul class="movie-list">
+        <li class="movie-item" *ngFor="let item of upComingList;">
+            <app-card-movie [data]="item"></app-card-movie>
+        </li>
+    </ul>
 </section>

@@ -1,11 +1,11 @@
 <div class="card-movie">
     <div class="cover-area">
-        <div class="backdrop" style="background-image: url('https://i.pinimg.com/736x/5d/e6/71/5de6711b1bc9b721dca593aa694fb80b--wolverine-poster-wolverine-movie.jpg')"></div>
-        <div class="rate">7.9</div>
+        <div class="backdrop" style="background-image: url('https://image.tmdb.org/t/p/original{{data.backdrop_path}}')"></div>
+        <div class="rate">{{data.vote_average}}</div>
     </div>
     <div class="info-area">
-        <div class="title">Wolverine</div>
-        <div class="release">Lançamento: 00/00/0000</div>
-        <div class="about">Lorem ipsum dolor asimet trey undnu iuyt retyu op liuyg Lorem ipsum dolor asimet trey undnu iuyt retyu op liuyg Lorem ipsum dolor asimet trey undnu iuyt retyu op liuyg</div>
+        <div class="title">{{data.title}}</div>
+        <div class="release">Lançamento: {{data.release_date}}</div>
+        <div class="about">{{data.overview}}</div>
     </div>
 </div>

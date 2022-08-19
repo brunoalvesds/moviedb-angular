@@ -9,6 +9,7 @@ import { DetailsComponent } from './Pages/details/details.component';
 import { MainHeaderComponent } from './SharedComponents/main-header/main-header.component';
 import { CardMovieComponent } from './SharedComponents/card-movie/card-movie.component';
 import { InputSearchComponent } from './SharedComponents/input-search/input-search.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { InputSearchComponent } from './SharedComponents/input-search/input-sear
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
