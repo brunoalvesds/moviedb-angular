@@ -20,6 +20,7 @@ export class DetailsComponent implements OnInit {
     vote_average: 0
   }
 
+  //Carousel config
   slideConfig = {
     slidesToShow: 4,
     slidesToScroll: 4,

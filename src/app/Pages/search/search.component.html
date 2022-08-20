@@ -2,7 +2,15 @@
 <main id="search-page" class="container">
     <h2>Resultados da busca</h2>
 
-    <ul class="movie-list" *ngIf="searchResults.length > 0">
+    <ngx-slick-carousel class="movie-list" #eventsModal="slick-carousel" [config]="slideConfig" *ngIf="isMobile">
+        <div ngxSlickItem *ngFor="let item of searchResults">
+            <div class="movie-item">
+                <app-card-movie [data]="item"></app-card-movie>
+            </div>
+        </div>
+    </ngx-slick-carousel>
+
+    <ul class="movie-list" *ngIf="searchResults.length > 0 && !isMobile">
         <li class="movie-item" *ngFor="let item of searchResults;">
             <app-card-movie [data]="item"></app-card-movie>
         </li>

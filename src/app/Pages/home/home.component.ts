@@ -9,6 +9,8 @@ import { GetMoviesService } from 'src/app/Services/get-movies/get-movies.service
 export class HomeComponent implements OnInit {
   nowPlayingList = [];
   upComingList = [];
+
+  //CarouselConfig
   slideConfig = { 
     slidesToShow: 4, 
     slidesToScroll: 4, 
@@ -46,13 +48,14 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     window.scrollTo(0, 0);
 
-    //Here we call service and list movies
+    //Here we call service and list now playing movies
     this.getMoviesService.getMovies('now_playing').subscribe(
         (response: any) => {
         this.nowPlayingList = response.results;
         },
     );
 
+    //Here we call service and list upcoming movies
     this.getMoviesService.getMovies('upcoming').subscribe(
       (response: any) => {
         this.upComingList = response.results;

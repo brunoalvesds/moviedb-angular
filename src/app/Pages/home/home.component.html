@@ -2,7 +2,6 @@
 <main id="home-page">
     <section id="now-playing">
         <h2>Em cartaz</h2>
-    
         <ngx-slick-carousel class="movie-list" #eventsModal="slick-carousel" [config]="slideConfig">
             <div ngxSlickItem *ngFor="let item of nowPlayingList">
                 <div class="movie-item">
@@ -11,6 +10,7 @@
             </div>
         </ngx-slick-carousel>
     </section>
+    
     <section id="up-coming">
         <h2>Próximos Lançamentos</h2>
         <ngx-slick-carousel class="movie-list" #eventsModal="slick-carousel" [config]="slideConfig">
