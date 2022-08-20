@@ -44,7 +44,9 @@ export class HomeComponent implements OnInit {
   constructor(private getMoviesService: GetMoviesService) { }
 
   ngOnInit() {
-      //Here we call service and list movies
+    window.scrollTo(0, 0);
+    
+    //Here we call service and list movies
     this.getMoviesService.getMovies('now_playing').subscribe(
         (response: any) => {
         this.nowPlayingList = response.results;

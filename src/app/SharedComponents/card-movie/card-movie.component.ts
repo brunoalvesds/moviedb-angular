@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-movie',
@@ -7,9 +8,16 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardMovieComponent implements OnInit {
   @Input() data: any = {};
-  constructor() { }
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  gotoDetail(id: string): void {
+    this.router.navigate(['/details/' + id]).then(() => {
+      window.location.reload();
+    });
   }
 
 }

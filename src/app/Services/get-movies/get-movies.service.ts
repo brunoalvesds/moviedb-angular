@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, map } from 'rxjs';
-import { Movie } from 'src/app/Interfaces/movie';
 
 @Injectable({
   providedIn: 'root'
@@ -35,17 +33,17 @@ export class GetMoviesService {
       );
   }
 
-  getDetails(id: number) {
+  getDetails(id: any) {
     let detailsUrl = `${this.url}${id}?api_key=${this.apiKey}&language=pt-BR`;
+    
 
-    return this.http.get(detailsUrl)
-      .subscribe(
-        res => {
-          console.log("res: ", res);
-        },
-        error => {
-          
-        }
-      );
+    return this.http.get(detailsUrl);
+  }
+
+  getRecommendation(id: any) {
+    console.log("chamou");
+    let recommendationsUrl = `${this.url}${id}/recommendations?api_key=${this.apiKey}&language=pt-BR`;
+
+    return this.http.get(recommendationsUrl);
   }
 }

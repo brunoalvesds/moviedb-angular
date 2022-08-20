@@ -1,22 +1,24 @@
 <app-main-header></app-main-header>
-<section id="now-playing">
-    <h2>Em cartaz</h2>
-
-    <ngx-slick-carousel class="movie-list" #eventsModal="slick-carousel" [config]="slideConfig">
-        <a ngxSlickItem *ngFor="let item of nowPlayingList" href="#">
-            <div class="movie-item">
-                <app-card-movie [data]="item"></app-card-movie>
+<main id="home-page">
+    <section id="now-playing">
+        <h2>Em cartaz</h2>
+    
+        <ngx-slick-carousel class="movie-list" #eventsModal="slick-carousel" [config]="slideConfig">
+            <div ngxSlickItem *ngFor="let item of nowPlayingList">
+                <div class="movie-item">
+                    <app-card-movie [data]="item"></app-card-movie>
+                </div>
             </div>
-        </a>
-    </ngx-slick-carousel>
-</section>
-<section id="up-coming">
-    <h2>Próximos Lançamentos</h2>
-    <ngx-slick-carousel class="movie-list" #eventsModal="slick-carousel" [config]="slideConfig">
-        <a ngxSlickItem *ngFor="let item of upComingList" href="#">
-            <div class="movie-item">
-                <app-card-movie [data]="item"></app-card-movie>
+        </ngx-slick-carousel>
+    </section>
+    <section id="up-coming">
+        <h2>Próximos Lançamentos</h2>
+        <ngx-slick-carousel class="movie-list" #eventsModal="slick-carousel" [config]="slideConfig">
+            <div ngxSlickItem *ngFor="let item of upComingList">
+                <div class="movie-item">
+                    <app-card-movie [data]="item"></app-card-movie>
+                </div>
             </div>
-        </a>
-    </ngx-slick-carousel>
-</section>
+        </ngx-slick-carousel>
+    </section>
+</main>

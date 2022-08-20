@@ -2,10 +2,17 @@
 
 .card-movie {
     max-width: 220px;
+    &:hover {
+        .cover-area .backdrop {
+            transform: scale(1.05);
+            opacity: 0.4;
+        }
+    }
 
     .cover-area {
         position: relative;
         margin-bottom: 10px;
+        cursor: pointer;
 
         .backdrop {
             height: 300px;
@@ -14,6 +21,7 @@
             background-position: center center;
             background-size: cover;
             background-repeat: no-repeat;
+            transition: all .2s linear;
         }
 
         .rate {
@@ -41,7 +49,24 @@
         }
 
         .about {
-            font-size: 12px;
+            font-size: 13px;
+            max-height: 65px;
+            position: relative;
+            overflow: hidden;
+
+            &:before {
+                content: '[...]';
+                position: absolute;
+                display: block;
+                background-color: #0d1a3c;
+                color: white;
+                bottom: 0;
+                right: 0;
+                font-size: 15px;
+                text-align: center;
+                height: 20px;
+                width: 42px;
+            }
         }
     }
 }

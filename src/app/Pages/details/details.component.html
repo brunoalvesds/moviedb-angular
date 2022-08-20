@@ -1,1 +1,28 @@
-<p>details works!</p>
+<app-main-header></app-main-header>
+<main id="details-page">
+    <figure class="movie-backdrop" style="background-image: url('https://image.tmdb.org/t/p/original{{movieInfo.backdrop_path}}')">
+        <div class="overlay">
+            <h1>{{movieInfo.title}}</h1>
+        </div>
+    </figure>
+    <div class="movie-info container">
+        <div class="top-info">
+            <p>Data de Lançamento: {{movieInfo.release_date | date: 'dd/MM/YYYY'}}</p>
+            <p>Avaliação geral: {{movieInfo.vote_average | number: '1.0-0'}}</p>
+        </div>
+        <div class="main-info">
+            <p>{{movieInfo.overview}}</p>
+        </div>
+    </div>
+
+    <section class="recommended container">
+        <h2>Recomendados</h2>
+        <ngx-slick-carousel class="movie-list" #eventsModal="slick-carousel" [config]="slideConfig">
+            <div ngxSlickItem *ngFor="let item of recommendedList">
+                <div class="movie-item">
+                    <app-card-movie [data]="item"></app-card-movie>
+                </div>
+            </div>
+        </ngx-slick-carousel>
+    </section>
+</main>

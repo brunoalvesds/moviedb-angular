@@ -19,3 +19,14 @@ img {
     width: 100%;
     height: auto;
 }
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 960px) {
+    .container {
+        padding: 0 25px;
+    }
+}
