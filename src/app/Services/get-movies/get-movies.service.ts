@@ -27,13 +27,11 @@ export class GetMoviesService {
 
   getDetails(id: any) {
     let detailsUrl = `${this.url}${id}?api_key=${this.apiKey}&language=pt-BR`;
-    
 
     return this.http.get(detailsUrl);
   }
 
   getRecommendation(id: any) {
-    console.log("chamou");
     let recommendationsUrl = `${this.url}${id}/recommendations?api_key=${this.apiKey}&language=pt-BR`;
 
     return this.http.get(recommendationsUrl);

@@ -20,4 +20,10 @@ describe('MainHeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should contain input field', () => {
+    expect(component).toBeTruthy();
+    const input = fixture.nativeElement.querySelector('input#search-input');
+    expect(input).not.toBeNull();
+  });
 });

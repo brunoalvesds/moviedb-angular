@@ -55,16 +55,14 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit(): void {
     window.scrollTo(0, 0);
-    
+
     //Get the movie ID
     const movieId = this.route.snapshot.paramMap.get('id');
-    console.log("id", movieId);
 
     //Get movie Details
     this.getMoviesService.getDetails(movieId).subscribe(
       (response: any) => {
         this.movieInfo = response;
-        console.log("info", response)
       }
     );
 
@@ -72,7 +70,6 @@ export class DetailsComponent implements OnInit {
     this.getMoviesService.getRecommendation(movieId).subscribe(
       (response: any) => {
         this.recommendedList = response.results;
-        console.log("rec", response)
       }
     );
   }

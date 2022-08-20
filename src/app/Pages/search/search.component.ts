@@ -17,12 +17,10 @@ export class SearchComponent implements OnInit {
 
     //Get the movie Name
     const movieName = this.route.snapshot.paramMap.get('name');
-    console.log("name", movieName);
 
     //Search a movie
     this.getMoviesService.searchMovies(movieName).subscribe(
       (response: any) => {
-        console.log("info", response)
         this.searchResults = response.results;
       }
     );

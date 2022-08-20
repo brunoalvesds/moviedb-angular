@@ -1,11 +1,11 @@
 <header>
-    <div class="content container">
+    <div class="content">
         <div class="left-content">
             <div class="site-title" [routerLink]="'/home'" title="Ir para o início">TMDB</div>
         </div>
         <div class="right-content">
             <div class="search-area">
-                <input type="text" placeholder="Buscar filme" (keydown)="keyDownFunction($event)" [(ngModel)]="name" title="Digite o nome do filme e pressione enter"/>
+                <input id="search-input" type="text" placeholder="Buscar filme" (keydown)="keyDownFunction($event)" [(ngModel)]="name" title="Digite o nome do filme e pressione enter"/>
             </div>
         </div>
     </div>
