@@ -15,7 +15,7 @@ export class CardMovieComponent implements OnInit {
   }
 
   gotoDetail(id: string): void {
-    this.router.navigate(['/details/' + id]).then(() => {
+    this.router.navigate(['/detalhes/' + id]).then(() => {
       window.location.reload();
     });
   }

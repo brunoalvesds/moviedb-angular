@@ -2,6 +2,8 @@
 
 .card-movie {
     max-width: 220px;
+    padding: 10px;
+
     &:hover {
         .cover-area .backdrop {
             transform: scale(1.05);
@@ -50,7 +52,7 @@
 
         .about {
             font-size: 13px;
-            max-height: 65px;
+            max-height: 63px;
             position: relative;
             overflow: hidden;
 
@@ -58,7 +60,7 @@
                 content: '[...]';
                 position: absolute;
                 display: block;
-                background-color: #0d1a3c;
+                background-color: $dark_blue_2;
                 color: white;
                 bottom: 0;
                 right: 0;

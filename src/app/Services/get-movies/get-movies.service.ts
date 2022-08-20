@@ -19,18 +19,10 @@ export class GetMoviesService {
     return this.http.get(moviesUrl);
   }
 
-  searchMovies(query: string) {
+  searchMovies(query: any) {
     let searchUrl = `${this.searchUrl}?api_key=${this.apiKey}&query=${query}&language=pt-BR`;
 
-    return this.http.get(searchUrl)
-      .subscribe(
-        res => {
-          console.log("res: ", res);
-        },
-        error => {
-          
-        }
-      );
+    return this.http.get(searchUrl);
   }
 
   getDetails(id: any) {

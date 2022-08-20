@@ -1,5 +1,4 @@
-
-@import '../../../assets/variables';
+@import "../../../assets/variables";
 
 header {
     padding: 15px 50px;
@@ -10,22 +9,35 @@ header {
         align-content: center;
         border-bottom: 1px solid rgba(255, 255, 255, 0.411);
         padding-bottom: 20px;
+
+        .right-content,
+        .search-area {
+            display: flex;
+            align-content: center;
+        }
     }
 }
 
-h1 {
+.site-title {
     margin: 0;
+    font-weight: bold;
+    font-size: 40px;
+    cursor: pointer;
 }
 
 input {
     background-color: $dark_blue_2;
     border: 0;
     border-radius: 20px;
-    padding: 5px 10px;
+    padding: 5px 20px;
     color: white;
+    font-size: 18px;
+    background-image: url('../../../assets/icon-search.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 80px;
 
     &::placeholder {
-        color: #03143e;
-        text-align: center;
+        color: $light_blue_1;
     }
 }

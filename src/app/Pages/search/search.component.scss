@@ -1,0 +1,18 @@
+@import '../../../assets/variables';
+
+h2 {
+    @include subtitle;
+}
+
+.movie-list {
+    list-style: none;
+    text-align: center;
+
+    .movie-item {
+        width: 300px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: left;
+        margin-bottom: 50px;
+    }
+}

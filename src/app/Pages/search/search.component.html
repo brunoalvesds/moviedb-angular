@@ -1,1 +1,11 @@
-<p>search works!</p>
+<app-main-header></app-main-header>
+<main id="search-page" class="container">
+    <h2>Resultados da busca</h2>
+
+    <ul class="movie-list" *ngIf="searchResults.length > 0">
+        <li class="movie-item" *ngFor="let item of searchResults;">
+            <app-card-movie [data]="item"></app-card-movie>
+        </li>
+    </ul>
+    <p *ngIf="searchResults.length == 0">Nenhum filme encontrado com este nome.</p>
+</main>
